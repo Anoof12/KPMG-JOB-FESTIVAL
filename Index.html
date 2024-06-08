@@ -6,22 +6,24 @@
     <title>Resource Selection</title>
     <style>
         :root {
-            --kpmg-blue: #00338d;
+            --kpmg-dark-blue: #00338d;
+            --kpmg-blue: #005eb8;
             --kpmg-light-blue: #0071ce;
-            --kpmg-background: #e6f2ff;
-            --kpmg-button-hover: #005bb5;
+            --kpmg-bg-light: #e6f2ff;
+            --kpmg-button-hover: #004c99;
         }
         body {
-            font-family: Arial, sans-serif;
-            background: var(--kpmg-background);
-            color: var(--kpmg-blue);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--kpmg-bg-light);
+            color: var(--kpmg-dark-blue);
             text-align: center;
             padding: 50px;
+            margin: 0;
         }
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: var(--kpmg-blue);
+            color: var(--kpmg-dark-blue);
         }
         ul {
             list-style: none;
@@ -37,15 +39,31 @@
             padding: 15px 25px;
             border-radius: 5px;
             font-size: 1.2em;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
         }
         a:hover {
             background-color: var(--kpmg-button-hover);
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <h1>Welcome! Choose your resource:</h1>
-    <ul>
-        <li><a href="path/to/your/pdf.pdf" target="_blank">View PDF</a></li>
-        <li><a href="https://website1.com" target="_blank">Visit Website
+    <div class="container">
+        <h1>Welcome! Choose your resource:</h1>
+        <ul>
+            <li><a href="path/to/your/pdf.pdf" target="_blank">View PDF</a></li>
+            <li><a href="https://website1.com" target="_blank">Visit Website 1</a></li>
+            <li><a href="https://website2.com" target="_blank">Visit Website 2</a></li>
+        </ul>
+    </div>
+</body>
+</html>
